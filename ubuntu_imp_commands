@@ -1,0 +1,147 @@
+1. delete the lock file
+2. python3
+3. Google
+4. vlc
+5. vmware
+6. xampp
+7. pip
+8. cmake
+9. opencv
+10. 7zip
+
+
+1. You can delete the lock file with the following command:
+You may also need to delete the lock file in the cache directory
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+
+
+
+2. python3:
+sudo apt-get install python3
+sudo apt-get install python3-pip
+sudo apt-get install python3-numpy
+sudo pip3 install numpy
+
+graphiz:
+sudo apt install graphviz
+
+matplotlib:
+sudo apt-get install python3-matplotlib
+
+3. install google: 
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt-get install libxss1 libgconf2-4 libappindicator1 libindicator7
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+4. install Vlc
+sudo apt-get install vlc
+
+5. vmware
+wget https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
+chmod a+x VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
+./VMware-Workstation-Full-14.0.0-6661328.x86_64.bundle
+
+(https://www.linuxhelp.com/how-to-install-vmware-workstation-14-on-ubuntu-16-04/)
+key:
+    AG352-4YED3-0852Q-LPXXT-MGKG4
+    FC1R0-2EX4M-H854Y-2NWGE-Q2KXA
+    ZU3EH-0YXD4-4819Q-CFWQZ-MZHX4
+    UF3H2-0ME0J-M8EAY-CMNNT-NZ0ZA
+    GU38K-DJW07-488MY-85YXT-P3HU4
+    YU1R2-8RZ16-4816Y-WYNET-WQUFD
+
+6. xampp 
+download xampp from :(for ubuntu (.run))
+https://www.apachefriends.org/download.html
+sudo chmod +x xampp-linux-x64-7.2.8-0-installer.run
+sudo ./xampp-linux-x64-7.2.8-0-installer.run
+
+xampp panel:
+First of all you need to install gksu with the following command:
+sudo apt-get install gksu
+Then, run:
+gksu gedit /usr/share/applications/xampp-control-panel.desktop
+
+and save the following code in the file.
+
+(You are using 64 bit system so there is no need to change anything, simply do copy paste)
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=XAMPP Control Panel
+Comment=Start and Stop XAMPP
+Exec=gksudo /opt/lampp/manager-linux-x64.run
+Icon=/opt/lampp/htdocs/favicon.ico
+Categories=Application
+Type=Application
+Terminal=false
+
+
+7. pip:
+pip uninstall -y numpy
+
+pip install numpy scipy scikit-learn pillow h5py
+pip install scikit-learn
+pip install pillow
+pip install h5py
+
+pip install --user --install-option="--prefix=" -U numpy
+pip install --no-binary -I tensorflow
+pip install keras
+
+
+8. cmake
+sudo apt install cmake
+PATH=$PATH:/opt/cmake/bin
+. ~/.bashrc
+
+9. opencv
+sudo apt-get install python-opencv
+sudo apt-get install libopencv-dev
+export OpenCV_DIR=/usr/share/OpenCV
+
+YOLO_mark
+https://github.com/AlexeyAB/Yolo_mark
+
+8. 7zip
+7za x myfile.tar.7z
+tar -xvf myfile.tar
+
+
+
+
+
+
+
+10. keras retinanet:
+pip install . --userpip install . --user
+python setup.py build_ext --inplace
+keras_retinanet/bin/train.py csv dlr_train.csv dlr_classes.csv 
+
+11.You don't have permission to access the requested directory. in opt/lampp
+sudo chmod 777 -R htdocs
+
+12. axel
+sudo apt-get install axel
+axel -n 100 -s 99999999 "http://85.25.103.36/downloads/[MoviesCouch]Parmanu.The.Story.of.Pokhran.(2018).Hindi.HD.720p.264.mkv?st=_M3MFDnPaOmwZT0gyfLuPA&e=1535871306"
+
+13. team viewer
+download from link:
+https://www.teamviewer.com/en/download/linux/?_ga=2.239301574.459129036.1538237301-233364045.1538237301&_gac=1.15976066.1538237303.EAIaIQobChMI6MGQsMzg3QIViSQrCh0L1w04EAAYASAAEgJ6jfD_BwE
+
+Open the teamviewer_13.x.yyyy_amd64.deb file with a double click.
+=>package will open in the Ubuntu Software Center.
+Click on the Install button.
+
+14. wine
+sudo add-apt-repository ppa:wine/wine-builds
+sudo apt-get update
+
+sudo apt-get install --install-recommends wine-staging
+
+uninstall:
+sudo apt remove wine2.0 wine-staging && sudo apt autoremove
+
+
